@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+/* Dina tokens. Tailwind gör klasser av dem. */
+@theme {
+  --color-linen: #F6F3EC;
+  --color-sand: #EAE7DF;
+  --color-sage: #DCE3D3;
+  --color-petal: #EFD5CA;
+  --color-ink: #272820;
+  --color-stone: #626259;
+  --color-pop: #DD2E24;
+  --color-pop-hover: #C42820;
+  --color-pop-deep: #A81F18;
+  --color-surface: #FFFEFA;
+  --color-rule: #C9C8BC;
+  --color-field: #8A897E;
+
+  --font-serif: 'DM Serif Display', Georgia, serif;
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --font-logo: 'Bodoni Moda', Georgia, serif;
+
+  --ease-soft: cubic-bezier(.2, .7, .2, 1);
+}
+
+/* Grundregler för hela sidan */
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-linen text-ink font-sans antialiased; }
+
+  :focus-visible {
+    outline: 2px solid var(--color-ink);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 6px rgb(221 46 36 / .28);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: .01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: .01ms !important;
+    }
+  }
+}
+
+/* Egna återanvändbara klasser */
+@utility wrap {
+  @apply mx-auto max-w-[1440px] px-5 sm:px-10 lg:px-20;
+}
+
+@utility eyebrow {
+  @apply inline-flex items-center gap-2.5 text-xs font-semibold uppercase tracking-wider text-stone;
+  &::before {
+    content: '';
+    @apply size-1.5 rounded-full bg-pop;
+  }
+}
