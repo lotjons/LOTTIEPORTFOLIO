@@ -1,10 +1,25 @@
+import Header from './components/Header'
+import { projects } from './data/projects'
+
 function App() {
   return (
-    <main className="wrap py-16">
-      <span className="eyebrow">Lottie / Frontend development student</span>
-      <h1 className="mt-6 font-serif text-5xl lg:text-7xl">Frontend craft</h1>
-      <p className="mt-4 max-w-md text-stone">Testing my Tailwind tokens.</p>
-    </main>
+    <>
+      <Header />
+      <main>
+        <section id="home" className="wrap min-h-screen scroll-mt-20 py-16">
+          <h1 className="font-serif text-5xl">Home</h1>
+        </section>
+        <section id="about" className="wrap min-h-screen scroll-mt-20 py-16">
+          <h2 className="font-serif text-4xl">About</h2>
+        </section>
+        <section id="projects" className="wrap min-h-screen scroll-mt-20 py-16">
+          <h2 className="font-serif text-4xl">Projects ({projects.length})</h2>
+        </section>
+        <section id="contact" className="wrap min-h-screen scroll-mt-20 py-16">
+          <h2 className="font-serif text-4xl">Contact</h2>
+        </section>
+      </main>
+    </>
   )
 }
 
