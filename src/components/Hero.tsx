@@ -1,6 +1,7 @@
 import IDot from "./IDot"
 import { useState } from "react"
 
+const values = ['Build with care', 'Think like a human', 'Make room for play']
   function Hero() {
   const [paused, setPaused] = useState(false)
 
@@ -64,6 +65,27 @@ import { useState } from "react"
           </figcaption>
         </figure>
       </div>
+      <div className="mt-14 flex flex-col items-start gap-5 border-t border-rule pt-6 sm:flex-row sm:items-end sm:justify-between">
+  <div className="flex flex-col gap-2.5">
+    <p id="values-label" className="eyebrow">How I work</p>
+    <ul
+      aria-labelledby="values-label"
+      className="flex flex-col gap-1 font-serif text-xl sm:flex-row sm:flex-wrap sm:gap-0"
+    >
+      {values.map((value, index) => (
+        <li key={value} className="flex items-baseline">
+          <span
+            aria-hidden="true"
+            className={`font-logo text-pop mr-2.5 sm:mx-3.5 ${index === 0 ? 'sm:hidden' : ''}`}
+          >
+            *
+          </span>
+          {value}
+        </li>
+      ))}
+    </ul>
+  </div>
+</div>
     </section>
   )
 }
