@@ -5,7 +5,7 @@ import { useState } from "react"
   const [paused, setPaused] = useState(false)
 
   const lineClass = `block w-fit origin-left animate-breathe motion-reduce:animate-none ${
-    paused ? '[animation-play-state:paused]' : ''
+    paused ? 'animate-none' : 'animate-breathe'
   }`
 
   return (
@@ -42,7 +42,7 @@ import { useState } from "react"
   className="inline-flex min-h-11 items-center gap-2 text-[13px] font-medium text-stone underline decoration-1 underline-offset-4 hover:text-ink hover:decoration-pop motion-reduce:hidden"
 >
   <span aria-hidden="true">{paused ? '▶' : '❚❚'}</span>
-  {paused ? 'Play motion' : 'Pause motion'}
+  {paused ? 'Play motion' : 'Stop motion'}
 </button>
         </div>
         <figure className="w-4/5 justify-self-end md:w-full">
