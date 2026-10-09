@@ -1,3 +1,5 @@
+import IDot from "./IDot"
+
 function Hero() {
   return (
     <section
@@ -14,8 +16,8 @@ function Hero() {
             className="font-serif text-[38px] leading-[1.04] md:text-[52px] lg:text-[76px]"
           >
             <span className="block">Frontend craft</span>
-            <span className="block">Clear stories</span>
-            <span className="block">Creative soul</span>
+            <span className="block">Clear stor<IDot />es</span>
+            <span className="block">Creat<IDot />ve soul</span>
           </h1>
 
           <p className="max-w-[490px] text-base text-stone lg:text-lg">

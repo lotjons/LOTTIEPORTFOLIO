@@ -55,3 +55,15 @@
     @apply size-1.5 rounded-full bg-pop;
   }
 }
+
+@utility red-i {
+  background: linear-gradient(to bottom, var(--color-pop) 34%, var(--color-ink) 34%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  @media (forced-colors: active) {
+    color: CanvasText;
+    background: none;
+  }
+}
