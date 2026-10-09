@@ -15,9 +15,9 @@ function Hero() {
             id="hero-title"
             className="font-serif text-[38px] leading-[1.04] md:text-[52px] lg:text-[76px]"
           >
-            <span className="block">Frontend craft</span>
-            <span className="block">Clear stor<IDot />es</span>
-            <span className="block">Creat<IDot />ve soul</span>
+            <span className="block w-fit origin-left animate-breathe motion-reduce:animate-none">Frontend craft</span>
+            <span className="block w-fit origin-left animate-breathe motion-reduce:animate-none" style={{ animationDelay: '2.4s' }}>Clear stor<IDot />es</span>
+            <span className="block w-fit origin-left animate-breathe motion-reduce:animate-none" style={{ animationDelay: '4.8s' }}>Creat<IDot />ve soul</span>
           </h1>
 
           <p className="max-w-[490px] text-base text-stone lg:text-lg">
