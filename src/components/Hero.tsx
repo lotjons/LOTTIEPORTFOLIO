@@ -85,6 +85,18 @@ const values = ['Build with care', 'Think like a human', 'Make room for play']
       ))}
     </ul>
   </div>
+  <a
+  href="#projects"
+  className="group inline-flex min-h-11 items-center gap-2 text-[15px] font-semibold underline decoration-1 underline-offset-4 hover:decoration-2 hover:decoration-pop"
+>
+  See my work
+  <span
+    aria-hidden="true"
+    className="transition-transform group-hover:translate-y-0.5 motion-reduce:transition-none"
+  >
+    ↓
+  </span>
+</a>
 </div>
     </section>
   )
