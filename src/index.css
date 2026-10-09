@@ -73,3 +73,7 @@
     background: none;
   }
 }
+
+  @utility paused {
+  animation-play-state: paused;
+}

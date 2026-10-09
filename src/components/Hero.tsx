@@ -1,6 +1,13 @@
 import IDot from "./IDot"
+import { useState } from "react"
 
-function Hero() {
+  function Hero() {
+  const [paused, setPaused] = useState(false)
+
+  const lineClass = `block w-fit origin-left animate-breathe motion-reduce:animate-none ${
+    paused ? '[animation-play-state:paused]' : ''
+  }`
+
   return (
     <section
       id="home"
@@ -15,17 +22,29 @@ function Hero() {
             id="hero-title"
             className="font-serif text-[38px] leading-[1.04] md:text-[52px] lg:text-[76px]"
           >
-            <span className="block w-fit origin-left animate-breathe motion-reduce:animate-none">Frontend craft</span>
-            <span className="block w-fit origin-left animate-breathe motion-reduce:animate-none" style={{ animationDelay: '2.4s' }}>Clear stor<IDot />es</span>
-            <span className="block w-fit origin-left animate-breathe motion-reduce:animate-none" style={{ animationDelay: '4.8s' }}>Creat<IDot />ve soul</span>
+            <span className={lineClass}>Frontend craft</span>
+            <span className={lineClass} style={{ animationDelay: '2.4s' }}>
+              Clear stor<IDot />es
+            </span>
+            <span className={lineClass} style={{ animationDelay: '4.8s' }}>
+              Creat<IDot />ve soul
+            </span>
           </h1>
 
           <p className="max-w-[490px] text-base text-stone lg:text-lg">
             Hi, I’m Lottie. I bring a background in communication and a love of
             visual thinking to thoughtful, human-friendly interfaces.
           </p>
-        </div>
 
+        <button
+  type="button"
+  onClick={() => setPaused((prev) => !prev)}
+  className="inline-flex min-h-11 items-center gap-2 text-[13px] font-medium text-stone underline decoration-1 underline-offset-4 hover:text-ink hover:decoration-pop motion-reduce:hidden"
+>
+  <span aria-hidden="true">{paused ? '▶' : '❚❚'}</span>
+  {paused ? 'Play motion' : 'Pause motion'}
+</button>
+        </div>
         <figure className="w-4/5 justify-self-end md:w-full">
           <div className="aspect-[408/472] overflow-hidden rounded-t-[180px] rounded-b bg-sand">
             <img
