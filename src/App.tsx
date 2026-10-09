@@ -1,4 +1,5 @@
 import Header from './components/Header'
+import Hero from './components/Hero'
 import { projects } from './data/projects'
 
 function App() {
@@ -6,9 +7,7 @@ function App() {
     <>
       <Header />
       <main>
-        <section id="home" className="wrap min-h-screen scroll-mt-20 py-16">
-          <h1 className="font-serif text-5xl">Home</h1>
-        </section>
+        <Hero />
         <section id="about" className="wrap min-h-screen scroll-mt-20 py-16">
           <h2 className="font-serif text-4xl">About</h2>
         </section>
