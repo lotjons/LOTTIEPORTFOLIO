@@ -1,8 +1,8 @@
-import IDot from "./IDot"
-import { useState } from "react"
+import { useState } from 'react'
+import IDot from './IDot'
 
 const values = ['Build with care', 'Think like a human', 'Make room for play']
-  function Hero() {
+function Hero() {
   const [paused, setPaused] = useState(false)
 
   const lineClass = `block w-fit origin-left animate-breathe motion-reduce:animate-none ${
@@ -25,10 +25,14 @@ const values = ['Build with care', 'Think like a human', 'Make room for play']
           >
             <span className={lineClass}>Frontend craft</span>
             <span className={lineClass} style={{ animationDelay: '2.4s' }}>
-              Clear stor<IDot />es
+              Clear stor
+              <IDot />
+              es
             </span>
             <span className={lineClass} style={{ animationDelay: '4.8s' }}>
-              Creat<IDot />ve soul
+              Creat
+              <IDot />
+              ve soul
             </span>
           </h1>
 
@@ -37,14 +41,14 @@ const values = ['Build with care', 'Think like a human', 'Make room for play']
             visual thinking to thoughtful, human-friendly interfaces.
           </p>
 
-        <button
-  type="button"
-  onClick={() => setPaused((prev) => !prev)}
-  className="inline-flex min-h-11 items-center gap-2 text-[13px] font-medium text-stone underline decoration-1 underline-offset-4 hover:text-ink hover:decoration-pop motion-reduce:hidden"
->
-  <span aria-hidden="true">{paused ? '▶' : '❚❚'}</span>
-  {paused ? 'Play motion' : 'Stop motion'}
-</button>
+          <button
+            type="button"
+            onClick={() => setPaused((prev) => !prev)}
+            className="inline-flex min-h-11 items-center gap-2 text-[13px] font-medium text-stone underline decoration-1 underline-offset-4 hover:text-ink hover:decoration-pop motion-reduce:hidden"
+          >
+            <span aria-hidden="true">{paused ? '▶' : '❚❚'}</span>
+            {paused ? 'Play motion' : 'Stop motion'}
+          </button>
         </div>
         <figure className="w-4/5 justify-self-end md:w-full">
           <div className="aspect-[408/472] overflow-hidden rounded-t-[180px] rounded-b bg-sand">
@@ -66,38 +70,40 @@ const values = ['Build with care', 'Think like a human', 'Make room for play']
         </figure>
       </div>
       <div className="mt-14 flex flex-col items-start gap-5 border-t border-rule pt-6 sm:flex-row sm:items-end sm:justify-between">
-  <div className="flex flex-col gap-2.5">
-    <p id="values-label" className="eyebrow">How I work</p>
-    <ul
-      aria-labelledby="values-label"
-      className="flex flex-col gap-1 font-serif text-xl sm:flex-row sm:flex-wrap sm:gap-0"
-    >
-      {values.map((value, index) => (
-        <li key={value} className="flex items-baseline">
+        <div className="flex flex-col gap-2.5">
+          <p id="values-label" className="eyebrow">
+            How I work
+          </p>
+          <ul
+            aria-labelledby="values-label"
+            className="flex flex-col gap-1 font-serif text-xl sm:flex-row sm:flex-wrap sm:gap-0"
+          >
+            {values.map((value, index) => (
+              <li key={value} className="flex items-baseline">
+                <span
+                  aria-hidden="true"
+                  className={`font-logo text-pop mr-2.5 sm:mx-3.5 ${index === 0 ? 'sm:hidden' : ''}`}
+                >
+                  *
+                </span>
+                {value}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <a
+          href="#projects"
+          className="group inline-flex min-h-11 items-center gap-2 text-[15px] font-semibold underline decoration-1 underline-offset-4 hover:decoration-2 hover:decoration-pop"
+        >
+          See my work
           <span
             aria-hidden="true"
-            className={`font-logo text-pop mr-2.5 sm:mx-3.5 ${index === 0 ? 'sm:hidden' : ''}`}
+            className="transition-transform group-hover:translate-y-0.5 motion-reduce:transition-none"
           >
-            *
+            ↓
           </span>
-          {value}
-        </li>
-      ))}
-    </ul>
-  </div>
-  <a
-  href="#projects"
-  className="group inline-flex min-h-11 items-center gap-2 text-[15px] font-semibold underline decoration-1 underline-offset-4 hover:decoration-2 hover:decoration-pop"
->
-  See my work
-  <span
-    aria-hidden="true"
-    className="transition-transform group-hover:translate-y-0.5 motion-reduce:transition-none"
-  >
-    ↓
-  </span>
-</a>
-</div>
+        </a>
+      </div>
     </section>
   )
 }

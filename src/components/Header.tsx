@@ -14,7 +14,10 @@ function Header() {
     <header className="sticky top-0 z-40 bg-linen/90 backdrop-blur">
       <div className="wrap flex h-20 items-center justify-between">
         <a href="#home" className="font-logo text-3xl font-medium no-underline">
-          lottie<span className="text-pop" aria-hidden="true">*</span>
+          lottie
+          <span className="text-pop" aria-hidden="true">
+            *
+          </span>
         </a>
 
         {/* Desktop: vanliga länkar */}
@@ -46,7 +49,11 @@ function Header() {
       </div>
 
       {menuOpen && (
-        <nav id="mobile-menu" aria-label="Mobile" className="wrap pb-8 sm:hidden">
+        <nav
+          id="mobile-menu"
+          aria-label="Mobile"
+          className="wrap pb-8 sm:hidden"
+        >
           <ul className="flex flex-col">
             {navItems.map((item) => (
               <li key={item.href}>

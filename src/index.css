@@ -2,49 +2,63 @@
 
 /* Dina tokens. Tailwind gör klasser av dem. */
 @theme {
-  --color-linen: #F6F3EC;
-  --color-sand: #EAE7DF;
-  --color-sage: #DCE3D3;
-  --color-petal: #EFD5CA;
+  --color-linen: #f6f3ec;
+  --color-sand: #eae7df;
+  --color-sage: #dce3d3;
+  --color-petal: #efd5ca;
   --color-ink: #272820;
   --color-stone: #626259;
-  --color-pop: #DD2E24;
-  --color-pop-hover: #C42820;
-  --color-pop-deep: #A81F18;
-  --color-surface: #FFFEFA;
-  --color-rule: #C9C8BC;
-  --color-field: #8A897E;
+  --color-pop: #dd2e24;
+  --color-pop-hover: #c42820;
+  --color-pop-deep: #a81f18;
+  --color-surface: #fffefa;
+  --color-rule: #c9c8bc;
+  --color-field: #8a897e;
 
-  --font-serif: 'DM Serif Display', Georgia, serif;
-  --font-sans: 'DM Sans', system-ui, sans-serif;
-  --font-logo: 'Bodoni Moda', Georgia, serif;
+  --font-serif: "DM Serif Display", Georgia, serif;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-logo: "Bodoni Moda", Georgia, serif;
 
-  --ease-soft: cubic-bezier(.2, .7, .2, 1);
+  --ease-soft: cubic-bezier(0.2, 0.7, 0.2, 1);
   --animate-breathe: breathe 8.4s ease-in-out infinite;
 
   @keyframes breathe {
-    0%, 28.6%, 100% { transform: scale(1); }
-    14.3% { transform: scale(1.05); }
+    0%,
+    28.6%,
+    100% {
+      transform: scale(1);
+    }
+    14.3% {
+      transform: scale(1.05);
+    }
   }
 }
 
 /* Grundregler för hela sidan */
 @layer base {
-  html { scroll-behavior: smooth; }
-  body { @apply bg-linen text-ink font-sans antialiased; }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-linen text-ink font-sans antialiased;
+  }
 
   :focus-visible {
     outline: 2px solid var(--color-ink);
     outline-offset: 3px;
-    box-shadow: 0 0 0 6px rgb(221 46 36 / .28);
+    box-shadow: 0 0 0 6px rgb(221 46 36 / 0.28);
   }
 
   @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    *, *::before, *::after {
-      animation-duration: .01ms !important;
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
-      transition-duration: .01ms !important;
+      transition-duration: 0.01ms !important;
     }
   }
 }
@@ -57,13 +71,17 @@
 @utility eyebrow {
   @apply inline-flex items-center gap-2.5 text-xs font-semibold uppercase tracking-wider text-stone;
   &::before {
-    content: '';
+    content: "";
     @apply size-1.5 rounded-full bg-pop;
   }
 }
 
 @utility red-i {
-  background: linear-gradient(to bottom, var(--color-pop) 34%, var(--color-ink) 34%);
+  background: linear-gradient(
+    to bottom,
+    var(--color-pop) 34%,
+    var(--color-ink) 34%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
