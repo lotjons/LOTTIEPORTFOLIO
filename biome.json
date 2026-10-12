@@ -6,6 +6,12 @@
     "formatter": { "quoteStyle": "single", "semicolons": "asNeeded" }
   },
   "css": { "parser": { "tailwindDirectives": true } },
-  "linter": { "enabled": true, "rules": { "preset": "recommended" } },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "preset": "recommended",
+      "correctness": { "useHookAtTopLevel": "error" }
+    }
+  },
   "assist": { "actions": { "source": { "organizeImports": "on" } } }
 }
