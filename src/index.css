@@ -53,6 +53,7 @@
     html {
       scroll-behavior: auto;
     }
+    /* biome-ignore-start lint/complexity/noImportantStyles: reduced motion must override all animations */
     *,
     *::before,
     *::after {
@@ -60,6 +61,7 @@
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
     }
+    /* biome-ignore-end lint/complexity/noImportantStyles: reduced motion must override all animations */
   }
 }
 
