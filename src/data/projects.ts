@@ -73,7 +73,7 @@ export const projects: Project[] = [
     id: 'perttie',
     title: 'Perttie',
     kind: 'Creative collaboration',
-    year: '2025',
+    year: '2021-present',
     tagline: 'Two people, one camera, lots of light.',
     description:
       'A creative side project with photographer Per Evers: he shoots, I am in front of the camera and we shape the ideas together.',
