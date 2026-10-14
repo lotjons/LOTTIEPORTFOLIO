@@ -23,6 +23,8 @@ export const projects: Project[] = [
     description:
       'Three months as communicator: designed the website and wrote much of its copy, built the communication strategy, a sales white paper and a film.',
     tags: ['UX', 'Communication', 'Strategy', 'Video'],
+    image: '/images/projects/ellevio.jpg',
+    imageAlt: 'Ellevio Energy Solutions website start page',
     links: [
       { label: 'Website', url: 'https://www.ellevioenergysolutions.se' },
       { label: 'Film', url: 'https://www.youtube.com/watch?v=-8_w-HXhabU' },
