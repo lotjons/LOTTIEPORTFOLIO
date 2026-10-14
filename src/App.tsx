@@ -1,6 +1,7 @@
 import { MotionConfig } from 'motion/react'
 import About from './components/About'
 import Contact from './components/Contact'
+import Footer from './components/Footer'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import OffScreen from './components/OffScreen'
@@ -19,6 +20,7 @@ function App() {
         <Toolbox />
         <Contact />
       </main>
+      <Footer />
     </MotionConfig>
   )
 }
