@@ -21,7 +21,7 @@ function Hero() {
 
           <h1
             id="hero-title"
-            className="font-serif text-[38px] leading-[1.04] md:text-[52px] lg:text-[76px]"
+            className="font-serif text-[clamp(2.5rem,5.5vw,4.75rem)] whitespace-nowrap"
           >
             <span className={lineClass}>Frontend craft</span>
             <span className={lineClass} style={{ animationDelay: '2.4s' }}>
