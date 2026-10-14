@@ -13,6 +13,8 @@ const filterTags = [
   'Accessibility',
   'Figma',
   'Communication',
+  'API',
+  'SQL',
 ]
 const PAGE_SIZE = 3
 
