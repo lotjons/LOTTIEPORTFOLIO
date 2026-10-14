@@ -46,17 +46,23 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 'common-ground',
-    title: 'Common Ground',
-    kind: 'Community events',
-    year: '2025',
-    tagline: 'Good things happen together.',
+    id: 'JAL-book-club',
+    title: 'JAL Book Club',
+    kind: 'School Project',
+    year: '2026',
+    tagline: 'Good things happen with a book in hand.',
     description:
-      'An inclusive local-events directory with clear categories, accessible filters and welcoming microcopy.',
-    tags: ['React', 'TypeScript', 'CSS', 'UX', 'Accessibility'],
-    image: '/images/projects/common-ground.jpg',
+      'A book club web app where members can add books, write reviews and browse each other´s bookshelves.',
+    tags: ['API', 'SQL', 'TypeScript', 'CSS', 'UX', 'Accessibility'],
+    image: '/images/projects/jal-book-club.jpg',
     imageAlt: 'Common Ground events directory interface',
-    links: [{ label: 'GitHub', url: 'https://github.com/' }],
+    links: [
+      {
+        label: 'GitHub',
+        url: 'https://github.com/',
+      },
+      { label: 'Vercel', url: 'https://jal-book-club-seven.vercel.app/' },
+    ],
   },
   {
     id: 'fieldnotes',

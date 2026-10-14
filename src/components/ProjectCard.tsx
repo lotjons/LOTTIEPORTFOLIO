@@ -15,10 +15,11 @@ function ProjectCard({ project }: ProjectCardProps) {
     links,
     image,
     imageAlt,
+    sprite,
   } = project
 
   return (
-    <article className="grid gap-4 rounded bg-sand p-4 sm:p-5 md:grid-cols-[5fr_7fr] md:gap-10">
+    <article className="group grid gap-4 rounded bg-sand p-4 sm:p-5 md:grid-cols-[5fr_7fr] md:gap-10">
       <div className="aspect-[4/3] overflow-hidden rounded bg-linen md:aspect-auto md:h-[280px]">
         {image ? (
           <img
@@ -26,6 +27,14 @@ function ProjectCard({ project }: ProjectCardProps) {
             alt={imageAlt ?? ''}
             className="size-full object-cover"
           />
+        ) : sprite ? (
+          <div
+            role="img"
+            aria-label="Pixel-art Sylvester, my chocolate labrador, walking"
+            className="flex size-full items-center justify-center"
+          >
+            <span className="sprite-dog group-hover:animate-walk group-focus-within:animate-walk" />
+          </div>
         ) : (
           <div className="grid size-full place-items-center text-sm text-stone">
             Preview coming soon

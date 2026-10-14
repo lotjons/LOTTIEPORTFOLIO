@@ -21,6 +21,16 @@
 
   --ease-soft: cubic-bezier(0.2, 0.7, 0.2, 1);
   --animate-breathe: breathe 8.4s ease-in-out infinite;
+  --animate-walk: walk 0.9s steps(4) infinite;
+
+  @keyframes walk {
+    from {
+      background-position: 0% 0;
+    }
+    to {
+      background-position: 133.333% 0;
+    }
+  }
 
   @keyframes breathe {
     0%,
@@ -107,4 +117,14 @@
     color: CanvasText;
     background: none;
   }
+}
+
+@utility sprite-dog {
+  display: block;
+  height: 72%;
+  aspect-ratio: 405 / 543;
+  background-image: url("/images/projects/dog-sprite.png");
+  background-repeat: no-repeat;
+  background-size: 400% 100%;
+  image-rendering: pixelated;
 }
