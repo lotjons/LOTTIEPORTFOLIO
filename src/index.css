@@ -77,6 +77,21 @@
     @apply size-1.5 rounded-full bg-pop;
   }
 }
+@utility link {
+  @apply inline-flex min-h-11 cursor-pointer items-center gap-1.5 text-sm font-semibold;
+
+  & .link-label {
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+  }
+
+  &:hover .link-label,
+  &:focus-visible .link-label {
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--color-pop);
+  }
+}
 
 @utility red-i {
   background: linear-gradient(
