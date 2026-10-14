@@ -1,3 +1,4 @@
+import { AnimatePresence, motion } from 'motion/react'
 import { useState } from 'react'
 import { projects } from '../data/projects'
 import ProjectCard from './ProjectCard'
@@ -64,12 +65,21 @@ function Projects() {
       </p>
 
       {visibleProjects.length > 0 ? (
-        <ul className="mt-6 flex flex-col gap-6">
-          {shownProjects.map((project) => (
-            <li key={project.id}>
-              <ProjectCard project={project} />
-            </li>
-          ))}
+        <ul className="relative mt-6 flex flex-col gap-6">
+          <AnimatePresence mode="popLayout" initial={false}>
+            {shownProjects.map((project) => (
+              <motion.li
+                key={project.id}
+                layout
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.98 }}
+                transition={{ duration: 0.3, ease: [0.2, 0.7, 0.2, 1] }}
+              >
+                <ProjectCard project={project} />
+              </motion.li>
+            ))}
+          </AnimatePresence>
         </ul>
       ) : (
         <p className="mt-6 rounded bg-sand p-8 text-center">
