@@ -83,12 +83,8 @@ function ContactForm() {
           </a>
           .
         </p>
-        <button
-          type="button"
-          onClick={() => setSent(false)}
-          className="min-h-11 text-sm font-medium underline decoration-1 underline-offset-4 hover:decoration-2 hover:decoration-pop"
-        >
-          Send another message
+        <button type="button" onClick={() => setSent(false)} className="link">
+          <span className="link-label">Send another message</span>
         </button>
       </div>
     )

@@ -44,10 +44,12 @@ function Hero() {
           <button
             type="button"
             onClick={() => setPaused((prev) => !prev)}
-            className="inline-flex min-h-11 items-center gap-2 text-[13px] font-medium text-stone underline decoration-1 underline-offset-4 hover:text-ink hover:decoration-pop motion-reduce:hidden"
+            className="link motion-reduce:hidden"
           >
             <span aria-hidden="true">{paused ? '▶' : '❚❚'}</span>
-            {paused ? 'Play motion' : 'Stop motion'}
+            <span className="link-label">
+              {paused ? 'Play motion' : 'Stop motion'}
+            </span>
           </button>
         </div>
         <figure className="w-4/5 justify-self-end md:w-full">
@@ -69,7 +71,7 @@ function Hero() {
           </figcaption>
         </figure>
       </div>
-      <div className="mt-14 flex flex-col items-start gap-5 border-t border-rule pt-6 sm:flex-row sm:items-end sm:justify-between">
+      <div className="mt-14 flex flex-col items-start gap-5 border-t border-rule pt-6 lg:flex-row lg:items-end lg:justify-between">
         <div className="flex flex-col gap-2.5">
           <p id="values-label" className="eyebrow">
             How I work
@@ -91,11 +93,8 @@ function Hero() {
             ))}
           </ul>
         </div>
-        <a
-          href="#projects"
-          className="group inline-flex min-h-11 items-center gap-2 text-[15px] font-semibold underline decoration-1 underline-offset-4 hover:decoration-2 hover:decoration-pop"
-        >
-          See my work
+        <a href="#projects" className="link group">
+          <span className="link-label">See my work</span>
           <span
             aria-hidden="true"
             className="transition-transform group-hover:translate-y-0.5 motion-reduce:transition-none"

@@ -91,9 +91,11 @@ function Projects() {
           <button
             type="button"
             onClick={() => setShown(hasMore ? shown + PAGE_SIZE : PAGE_SIZE)}
-            className="min-h-11 text-sm font-semibold underline decoration-1 underline-offset-4 hover:decoration-2 hover:decoration-pop"
+            className="link"
           >
-            {hasMore ? 'Show more' : 'Show fewer'}
+            <span className="link-label">
+              {hasMore ? 'Show more' : 'Show fewer'}
+            </span>
           </button>
           <span className="text-sm text-stone">
             {shownProjects.length} / {visibleProjects.length}

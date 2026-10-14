@@ -57,12 +57,8 @@ function ProjectCard({ project }: ProjectCardProps) {
 
         <div className="flex flex-wrap gap-x-5">
           {links.map((link) => (
-            <a
-              key={link.url}
-              href={link.url}
-              className="inline-flex min-h-11 items-center gap-1 text-sm font-medium underline decoration-1 underline-offset-4 hover:decoration-2 hover:decoration-pop"
-            >
-              {link.label}
+            <a key={link.url} href={link.url} className="link">
+              <span className="link-label">{link.label}</span>
               <span className="sr-only"> – {title}</span>
               <span aria-hidden="true">↗</span>
             </a>

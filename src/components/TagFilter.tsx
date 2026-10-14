@@ -31,12 +31,8 @@ function TagFilter({ tags, selectedTags, onToggle, onClear }: TagFilterProps) {
       })}
 
       {selectedTags.length > 0 && (
-        <button
-          type="button"
-          onClick={onClear}
-          className="min-h-11 px-2 text-sm font-medium underline decoration-1 underline-offset-4 hover:decoration-2 hover:decoration-pop"
-        >
-          Clear filters
+        <button type="button" onClick={onClear} className="link px-2">
+          <span className="link-label">Clear filters</span>
         </button>
       )}
     </fieldset>

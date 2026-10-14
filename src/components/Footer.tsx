@@ -15,11 +15,9 @@ function Footer() {
           © {year} Lottie Jonsson · Built with React, TypeScript &amp; Tailwind
         </p>
 
-        <a
-          href="#home"
-          className="inline-flex min-h-11 items-center gap-1 text-sm font-medium underline decoration-1 underline-offset-4 hover:decoration-2 hover:decoration-pop"
-        >
-          Back to top <span aria-hidden="true">↑</span>
+        <a href="#home" className="link">
+          <span className="link-label">Back to top</span>
+          <span aria-hidden="true">↑</span>
         </a>
       </div>
     </footer>
