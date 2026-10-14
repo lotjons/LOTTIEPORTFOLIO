@@ -1,3 +1,5 @@
+import ContactForm from './ContactForm'
+
 const contactLinks = [
   {
     label: 'Email',
@@ -56,7 +58,7 @@ function Contact() {
           </dl>
         </div>
 
-        {/* ContactForm kommer här i #15 */}
+        <ContactForm />
       </div>
     </section>
   )
