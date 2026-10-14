@@ -1,3 +1,4 @@
+import { MotionConfig } from 'motion/react'
 import About from './components/About'
 import Contact from './components/Contact'
 import Header from './components/Header'
@@ -8,7 +9,7 @@ import Toolbox from './components/Toolbox'
 
 function App() {
   return (
-    <>
+    <MotionConfig reducedMotion="user">
       <Header />
       <main>
         <Hero />
@@ -18,7 +19,7 @@ function App() {
         <Toolbox />
         <Contact />
       </main>
-    </>
+    </MotionConfig>
   )
 }
 
