@@ -18,39 +18,38 @@ function Hero() {
       <div className="grid items-center gap-10 md:grid-cols-[1fr_300px] lg:grid-cols-[1fr_408px] lg:gap-14">
         <div className="flex flex-col items-start gap-6">
           <p className="eyebrow">Lottie / Frontend development student</p>
-
-          <h1
-            id="hero-title"
-            className="font-serif text-[clamp(2.5rem,5.5vw,4.75rem)] whitespace-nowrap"
-          >
-            <span className={lineClass}>Frontend craft</span>
-            <span className={lineClass} style={{ animationDelay: '2.4s' }}>
-              Clear stor
-              <IDot />
-              es
-            </span>
-            <span className={lineClass} style={{ animationDelay: '4.8s' }}>
-              Creat
-              <IDot />
-              ve soul
-            </span>
-          </h1>
-
+          <div className="flex flex-col items-start gap-1">
+            <h1
+              id="hero-title"
+              className="font-serif text-[clamp(2.5rem,5.5vw,4.75rem)] leading-[1.0] whitespace-nowrap"
+            >
+              <span className={lineClass}>Frontend craft</span>
+              <span className={lineClass} style={{ animationDelay: '2.4s' }}>
+                Clear stor
+                <IDot />
+                es
+              </span>
+              <span className={lineClass} style={{ animationDelay: '4.8s' }}>
+                Creat
+                <IDot />
+                ve soul
+              </span>
+            </h1>
+            <button
+              type="button"
+              onClick={() => setPaused((prev) => !prev)}
+              className="link motion-reduce:hidden"
+            >
+              <span aria-hidden="true">{paused ? '▶' : '❚❚'}</span>
+              <span className="link-label">
+                {paused ? 'Play motion' : 'Stop motion'}
+              </span>
+            </button>
+          </div>
           <p className="max-w-[490px] text-base text-stone lg:text-lg">
             Hi, I’m Lottie. I bring a background in communication and a love of
             visual thinking to thoughtful, human-friendly interfaces.
           </p>
-
-          <button
-            type="button"
-            onClick={() => setPaused((prev) => !prev)}
-            className="link motion-reduce:hidden"
-          >
-            <span aria-hidden="true">{paused ? '▶' : '❚❚'}</span>
-            <span className="link-label">
-              {paused ? 'Play motion' : 'Stop motion'}
-            </span>
-          </button>
         </div>
         <figure className="w-4/5 justify-self-end md:w-full">
           <div className="aspect-[408/472] overflow-hidden rounded-t-[180px] rounded-b bg-sand">
