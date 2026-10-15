@@ -1,75 +1,79 @@
-# React + TypeScript + Vite
+# Lotties portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Det här är min portfolio och mitt första större projekt i React. Jag ville att
+sidan skulle kännas lugn och personlig, alltså en blandning av det jag kommer ifrån
+(kommunikation och UX) och det jag lär mig nu (frontendutveckling).
 
-Currently, two official plugins are available:
+**Live:** https://lottie-portfolio-theta.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Figma (skisser för mobil och desktop):** [LÄNK]
 
-## React Compiler
+**Lighthouse-resultat** [docs/lighthouse.pdf](docs/lighthouse.pdf)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Byggd med
 
-## Expanding the ESLint configuration
+- React + TypeScript (via Vite)
+- Tailwind CSS
+- Motion för animationer
+- Biome för att hålla koden snygg och hitta fel
+- Git, GitHub och Vercel
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Det här har jag byggt
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Ett filter för projekten** där man kan välja flera taggar samtidigt. Ett
+  projekt visas bara om det matchar alla valda taggar. Det här var det
+  svåraste att få till!
+- **"Show more"** så att man ser tre projekt i taget.
+- **Ett kontaktformulär** som kollar varje fält och visar vad som saknas direkt
+  bredvid fältet. Formuläret skickar inget på riktigt än – det står också på
+  sidan, så att ingen tror att meddelandet har kommit fram.
+- **Animationer** när projektlistan ändras. De stängs av om man har valt
+  "reducera rörelse" på sin dator.
+- **Tillgänglighet** har varit viktigt för mig: hela sidan går att använda med
+  tangentbord, det finns en "Skip to content"-länk och färgerna har tillräcklig
+  kontrast. Lighthouse gav 100 i Accessibility, Best Practices och SEO, och 98
+  i Performance.
+- Sidan fungerar från 360 px bred mobil upp till stor skärm.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Köra projektet lokalt
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+git clone https://github.com/lotjons/LOTTIEPORTFOLIO.git
+cd LOTTIEPORTFOLIO
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Andra kommandon:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- `npm run build` – bygger sidan som den blir på Vercel
+- `npm run check` – kollar koden med Biome
+- `npm run format` – formaterar koden
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Ändringar från Figma-skissen
 
-```
+- **Lugnare färger.** Jag gick ner till sju färger med en röd accent
+  (vallmoröd, min favoritblomma) för att sidan inte skulle kännas rörig.
+- **Nya typsnitt.** Rubriker och logga i Melodrama, brödtext i Nunito. Jag
+  ville ha något med mer personlighet än mina första val.
+- **Projektkorten fick mer innehåll.** I skissen hade korten bara bild och
+  titel, men uppgiften kräver beskrivning, taggar och länkar.
+- **Röda i-prickar** i stället för punkter i stora rubriken, och rubriken
+  "andas" långsamt. Det finns också en knapp för att stoppa rörelsen.
+- **"See my work"-länk**-knappen fick krympa, den stora tog för
+  mycket uppmärksamhet.
+- **Bara "Clear filters"** i filtret, i stället för både "All" och "Clear",
+  eftersom de gjorde samma sak.
+- **Pixel Pup**, pixelanimationen som går när man håller
+  musen över kortet eller tabbar dit.
+
+## Reflektion
+
+[Skrivs här – 200–400 ord]
+
+## Nästa steg
+
+- Koppla kontaktformuläret till en riktig e-posttjänst
+- En knapp för att byta mellan svenska och engelska på sidan
+- Byta ut exempelprojeket Fieldnotes mot eget projekt.
+- Egna projektsidor för varje projekt (finns designade i min designutforskning)
