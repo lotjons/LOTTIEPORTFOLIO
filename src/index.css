@@ -1,4 +1,10 @@
 @import "tailwindcss";
+@font-face {
+  font-family: "Melodrama";
+  src: url("/fonts/Melodrama-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
 
 /* Dina tokens. Tailwind gör klasser av dem. */
 @theme {
@@ -15,9 +21,9 @@
   --color-rule: #c9c8bc;
   --color-field: #8a897e;
 
-  --font-serif: "DM Serif Display", Georgia, serif;
-  --font-sans: "DM Sans", system-ui, sans-serif;
-  --font-logo: "Bodoni Moda", Georgia, serif;
+  --font-serif: "Melodrama", Georgia, serif;
+  --font-sans: "Nunito", system-ui, sans-serif;
+  --font-logo: "Melodrama", Georgia, serif;
 
   --ease-soft: cubic-bezier(0.2, 0.7, 0.2, 1);
   --animate-breathe: breathe 8.4s ease-in-out infinite;

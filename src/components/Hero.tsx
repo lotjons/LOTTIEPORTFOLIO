@@ -17,7 +17,7 @@ function Hero() {
     >
       <div className="grid items-center gap-10 md:grid-cols-[1fr_300px] lg:grid-cols-[1fr_408px] lg:gap-14">
         <div className="flex flex-col items-start gap-6">
-          <p className="eyebrow">Lottie / Frontend development student</p>
+          <p className="eyebrow mb-6">Lottie / Frontend development student</p>
           <div className="flex flex-col items-start gap-1">
             <h1
               id="hero-title"
