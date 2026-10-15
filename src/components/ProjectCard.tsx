@@ -42,17 +42,18 @@ function ProjectCard({ project }: ProjectCardProps) {
         )}
       </div>
 
-      <div className="flex flex-col justify-center gap-2.5 md:pr-6">
+      <div className="flex flex-col justify-center gap-3 md:pr-6">
         <p className="flex gap-4 text-xs text-stone">
           <span>{kind}</span>
           <span>{year}</span>
         </p>
-        <h3 className="font-serif text-[26px] leading-tight lg:text-[32px]">
-          {title}
-        </h3>
-        <p className="font-serif text-xl leading-snug">{tagline}</p>
+        <div className="mb-5 flex flex-col gap-2">
+          <h3 className="font-serif text-[26px] leading-none lg:text-[32px]">
+            {title}
+          </h3>
+          <p className="text-lg font-medium leading-snug">{tagline}</p>
+        </div>
         <p className="text-[15px] text-stone">{description}</p>
-
         <ul aria-label="Technologies" className="flex flex-wrap gap-1.5">
           {tags.map((tag) => (
             <li
