@@ -51,7 +51,9 @@ function ProjectCard({ project }: ProjectCardProps) {
           <h3 className="font-serif text-[26px] leading-none lg:text-[32px]">
             {title}
           </h3>
-          <p className="text-lg font-medium leading-snug">{tagline}</p>
+          <p className="text-[15px] font-medium leading-snug text-stone">
+            {tagline}
+          </p>
         </div>
         <p className="text-[15px] text-stone">{description}</p>
         <ul aria-label="Technologies" className="flex flex-wrap gap-1.5">
