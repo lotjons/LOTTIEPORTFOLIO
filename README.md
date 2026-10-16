@@ -1,15 +1,16 @@
 # Lotties portfolio
 
 Det här är min portfolio och mitt första större projekt i React. Jag ville att
-sidan skulle kännas lugn och personlig, alltså en blandning av det jag kommer ifrån
-(kommunikation och UX) och det jag lär mig nu (frontendutveckling).
+sidans formspråk skulle kännas lugn och personlig och på sikt ska den även spegla min bakgrund inom kommunikation samt det jag lär mig nu (frontendutveckling).
 
 **Live:** https://lottie-portfolio-theta.vercel.app/
 
-**Figma (skisser för mobil och desktop):** [LÄNK]
+**Figma:** [Portfolio-skisser (mobil + desktop)]
+Prototyp 1: (https://claude.ai/artifact/7miLFKdhKTq62mtQwKnReT#page-dcb81aee8d83)
+Prototyp 2: (https://www.figma.com/design/QIapI5dfmfBbQ3gh6y1Zi4/Portfolio-v1.?node-id=8-16086&t=v9BW2TTNRqCAufES-1)
+Prototyp 3: (https://www.figma.com/design/IGVyI0mS2rWDCEPodGceTH/Prototyp-v.2?node-id=0-1)
 
-**Lighthouse-resultat** [docs/lighthouse.pdf](docs/lighthouse.pdf)
-
+**Lighthouse-resultat:** [docs/lighthouse.pdf](docs/lighthouse.pdf)
 ## Byggd med
 
 - React + TypeScript (via Vite)
@@ -18,6 +19,12 @@ sidan skulle kännas lugn och personlig, alltså en blandning av det jag kommer 
 - Biome för att hålla koden snygg och hitta fel
 - Git, GitHub och Vercel
 
+
+## Designutforskning och AI
+
+Jag genererade [prototyp 1](https://claude.ai/artifact/7miLFKdhKTq62mtQwKnReT#page-dcb81aee8d83) och utforskade där varianter (states,filter, fomulärfel). Med [inspiration från en blandning av olika designs](docs/design-exploration/inspiration-prototyp.png) som jag gillar tog jag tillsammans med Claude fram [prototyp 2](https://www.figma.com/design/QIapI5dfmfBbQ3gh6y1Zi4/Portfolio-v1.?node-id=8-16086&t=v9BW2TTNRqCAufES-1). Den gillade jag skarpt och valde att tweaka. Jag promptade Claude att ändra detaljer tills jag fick fram en enklare version. Jag hade gärna behållit mycket av designen från prototyp 2, men tyckte den lite för deatljrik. Därför skalade jag ner den så att det också skulle bli rimligt att hinna med allt. Då landade jag i [prototyp 3](https://www.figma.com/design/IGVyI0mS2rWDCEPodGceTH/Prototyp-v.2?node-id=0-1)
+  Jag har skrivit koden själv i VS Code, med Claude som lärare: jag bad Claude förklara varför och hur saker fungerar och hänger ihop, och ge mig tydlig feedback.
+
 ## Det här har jag byggt
 
 - **Ett filter för projekten** där man kan välja flera taggar samtidigt. Ett
@@ -25,8 +32,8 @@ sidan skulle kännas lugn och personlig, alltså en blandning av det jag kommer 
   svåraste att få till!
 - **"Show more"** så att man ser tre projekt i taget.
 - **Ett kontaktformulär** som kollar varje fält och visar vad som saknas direkt
-  bredvid fältet. Formuläret skickar inget på riktigt än – det står också på
-  sidan, så att ingen tror att meddelandet har kommit fram.
+  bredvid fältet. Formuläret skickar inget på riktigt än, men mitt mål är att lösa det för framtida användning av sidan. Jag har gjort så dett står på
+  sidan, så att ingen tror att meddelandet har kommit fram, istället hänvisas man till att skriva mail. 
 - **Animationer** när projektlistan ändras. De stängs av om man har valt
   "reducera rörelse" på sin dator.
 - **Tillgänglighet** har varit viktigt för mig: hela sidan går att använda med
@@ -60,12 +67,13 @@ Andra kommandon:
   titel, men uppgiften kräver beskrivning, taggar och länkar.
 - **Röda i-prickar** i stället för punkter i stora rubriken, och rubriken
   "andas" långsamt. Det finns också en knapp för att stoppa rörelsen.
-- **"See my work"-länk**-knappen fick krympa, den stora tog för
-  mycket uppmärksamhet.
+- **"See my work"**-knappen fick krympa, den stora tog för mycket uppmärksamhet.
 - **Bara "Clear filters"** i filtret, i stället för både "All" och "Clear",
   eftersom de gjorde samma sak.
-- **Pixel Pup**, pixelanimationen som går när man håller
+- **Pixel Pup**, istället för att den loopar konstant har jag ändrat så att den bara går när man håller
   musen över kortet eller tabbar dit.
+- **Field Notes** är ett påhittat utfyllnadsprojekt som kommer ersättas med något från min utbldning inom frontend, typ ett spel.
+
 
 ## Reflektion
 
