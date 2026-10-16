@@ -8,7 +8,7 @@ sidans formspråk skulle kännas lugnt och personlig och på sikt ska den även 
 **Design:**
 
 - [Prototyp 1 (Claude)](https://claude.ai/artifact/7miLFKdhKTq62mtQwKnReT)
-- [Prototyp 2 (Figma)](https://www.figma.com/design/QIapI5dfmfBbQ3gh6y1Zi4/Portfolio-v1.?node-id=8-16086)
+- [Prototyp 2 (Figma)](https://www.figma.com/proto/QIapI5dfmfBbQ3gh6y1Zi4/Portfolio-v1.?node-id=0-1&t=QbZFgpZh3537Caw7-1) / [Dev-mode](https://www.figma.com/design/QIapI5dfmfBbQ3gh6y1Zi4/Portfolio-v1.?node-id=0-1&t=QbZFgpZh3537Caw7-1)
 - [Prototyp 3 (Figma)](https://www.figma.com/design/IGVyI0mS2rWDCEPodGceTH/Prototyp-v.2?node-id=0-1)
 
 **Lighthouse-resultat:** [docs/lighthouse.pdf](docs/lighthouse.pdf)<br>
